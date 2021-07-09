@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --color-primary: #10235e;
+  --color-secondary: #f4f4f8;
+  --color-shadow: #c6c7cb;
+  --color-shadow-active: #10235e;
+  --color-shadow-error: #ff2828;
+  --color-error: #ff2828;
+  --color-text: #10235e;
+  --color-text-active: #f4f4f4;
+  --color-link: #3753a7;
+  --shadow-style: 1px 1px 5px 0px;
+
+  --shadow-style-hover: inset 0px 0px 30px -5px;
+  --shadow-style-active: inset 0px 0px 20px -10px;
+  --shadow-style-active-button: inset -2px -2px 10px 1px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  background-color: var(--color-secondary);
+}
+
+.button {
+  height: 55px;
+  margin: 15px 0 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: var(--shadow-style) var(--color-shadow);
+  font-family: inherit;
+  font-size: 20px;
+  color: var(--color-text-active);
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.button:hover, .button:focus {
+  box-shadow: var(--shadow-style-active-button) var(--color-shadow);
+}
+
+.error-loading-page {
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+  font-size: 30px;
+  font-weight: 900;
+}
