@@ -2,7 +2,6 @@
   <div id="app">
     <main-header/>
     <router-view></router-view>
-    <!-- <button @click="test" type="button" name="button"></button> -->
   </div>
 </template>
 

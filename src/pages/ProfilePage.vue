@@ -19,6 +19,11 @@
             <span>Телефон</span>
             <input type="text" v-model="profileInfo.phone">
           </div>
+          <div class="profile-info-block">
+            <span>Социальные сети</span>
+            <input type="text" v-model="profileInfo.social">
+            <span class="password-info">Вы можете указать ссылку на свою страницу ВК, или другую соц. сеть, чтобы мы могли найти и связаться с вами.</span>
+          </div>
         </div>
         <div class="profile-auth">
           <div class="profile-info-block">

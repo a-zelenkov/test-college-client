@@ -2,7 +2,8 @@ import store from '../store'
 
 export default {
   async request(url, method, params) {
-    let default_url = 'http://bastion.somee.com/api/'
+    //let default_url = 'https://localhost:44333/api/';
+    let default_url = 'http://www.bastion.somee.com/api/';
 
     let default_headers = {
       'Content-Type': 'application/json;charset=utf-8',

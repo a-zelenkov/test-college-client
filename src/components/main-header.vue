@@ -1,13 +1,13 @@
 <template>
   <header>
-    <div class="header-logo">
+    <a href="https://www.sssu.ru/Default.aspx?tabid=671" class="header-logo" target="_blank">
       <img src="http://xn--80acdlojyj9a.xn--p1ai/kes/img/logo.png" alt="">
       <div class="logo-text">
-        <span>Колледж Экономики</span>
-        <span>и Сервиса</span>
+        <span>Колледж экономики</span>
+        <span>и сервиса</span>
         <a href="https://www.sssu.ru/Default.aspx" class="logo-isoip" target="_blank">ИСОиП (филиала) ДГТУ в г. Шахты</a>
       </div>
-    </div>
+    </a>
     <div class="header-pages">
       <router-link :to="{ name: 'main'}">Главная</router-link>
       <router-link :to="{ name: 'test'}">Тестирование</router-link>
@@ -49,7 +49,7 @@ export default {
 
     logOut() {
       localStorage.removeItem('token');
-      api.get('auth/loguot');
+      api.get('auth/logout');
       this.setToken('');
       this.setAuthStatus(false);
       if (this.$route.name !== 'main') {
@@ -96,6 +96,9 @@ export default {
   .header-logo {
     display: flex;
     align-items: center;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   .header-logo img{
@@ -112,12 +115,11 @@ export default {
     line-height: 0.9em;
     letter-spacing: 0.04em;
     user-select: none;
-    cursor: default;
   }
 
   .logo-isoip {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 100;
     font-style: italic;
     opacity: .8;

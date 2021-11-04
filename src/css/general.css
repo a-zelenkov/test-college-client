@@ -37,14 +37,30 @@ body {
   font-family: inherit;
   font-size: 20px;
   color: var(--color-text-active);
-  border: none;
+  border: 1px solid transparent;
   outline: none;
   text-decoration: none;
   font-weight: inherit;
+  user-select: none;
 }
 
-.button:hover, .button:focus {
+.button:hover {
   box-shadow: var(--shadow-style-active-button) var(--color-shadow);
+}
+
+.button:focus-visible {
+  border: 1px solid var(--color-secondary);
+  box-shadow: 0 0 10px 1px var(--color-primary);
+}
+
+.button:active {
+  box-shadow: none;
+}
+
+.button:disabled {
+  box-shadow: none;
+  cursor: default;
+  opacity: .6;
 }
 
 .error-loading-page {
